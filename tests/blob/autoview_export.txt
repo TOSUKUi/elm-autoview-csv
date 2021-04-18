@@ -1,0 +1,46 @@
+_n	_PER	_BASE	Start Year	Start Month	Start Day	End Year	End Month	End Day	_LONG	_SHORT	_L_OPEN_H	_L_CLOSE_H	_S_OPEN_H	_S_CLOSE_H
+2017	1	1	2017	1	1	2100	1	1	close	44	26	2.8	true	1
+
+Initial Capital	Base Currency	Pyramiding	Allow Up To Orders	Order Size	Order Type	Recalculate After Order filled	Recalculate On Every Tick	Verify Price For Limit Orders	Slippage	Commission	Commission Type
+NONE	0	false	false	100000		false	0	fixed	percent	false	0
+
+Net Profit	Total Closed Trades	Percent Profitable	Profit Factor	Max Drawdown	Avg Trade	Avg # Bars in Trades
+51528	109	0.5046	3.449	-5582.5	472.7	54
+
+	All	Long	Short
+Net Profit	51528	51743.5	-215.5
+Gross Profit	72572.5	72572.5	0
+Gross Loss	-21044.5	-20829	-215.5
+Max Drawdown	-5582.5
+Buy & Hold Return	666703	6.667
+Sharpe Ratio	0.699
+Profit Factor	3.449	3.484	0
+Max Contracts Held	1	1	1
+Open PL	0	0
+Commission Paid	0
+Total Closed Trades	109	108	1
+Total Open Trades	0	0	0
+Number Winning Trades	55	55	0
+Number Losing Trades	54	53	1
+Percent Profitable	0.5046	0.5093	0
+Avg Trade	472.7	479.1	-215.5
+Avg Win Trade	1319.5	1319.5	N/A
+Avg Loss Trade	-389.7	-393	-215.5
+Ratio Avg Win / Avg Loss	3.386	3.358	0
+Largest Winning Trade	7862	7862	N/A
+Largest Losing Trade	-3145.5	-3145.5	-215.5
+Avg # Bars in Trades	54	54	13
+Avg # Bars in Winning Trades	73	73	0
+Avg # Bars in Losing Trade	35	35	13
+
+Trade #	Type	Signal	Date/Time	Price	Contracts	Profit	Profit %	Cum. Profit	Cum. Profit %	Run-up	Run-up %	Drawdown	Drawdown %
+1	Entry Short	Short	2020-01-06 08:00:00	7340								
+	Exit Short	Long	2020-01-06 20:00:00	7555.5	1	-215.5	-0.0294	-215.5	-0.0022	23	0.0031	-241.5	-0.0329
+2	Entry Long	Long	2020-01-06 20:00:00	7555.5								
+	Exit Long	close	2020-01-09 03:00:00	8075.5	1	520	0.0688	304.5	0.0052	906	0.1199	-62	-0.0082
+3	Entry Long	Long	2020-01-10 21:00:00	7830								
+	Exit Long	close	2020-01-15 17:00:00	8613.5	1	783.5	0.1001	1088	0.0078	1081	0.1381	-19.5	-0.0025
+4	Entry Long	Long	2020-01-17 16:00:00	8872								
+	Exit Long	close	2020-01-19 22:00:00	8627.5	1	-244.5	-0.0276	843.5	-0.0024	316	0.0356	-420	-0.0473
+5	Entry Long	Long	2020-01-22 07:00:00	8725								
+	Exit Long	close	2020-01-23 06:00:00	8650	1	-75	-0.0086	768.5	-0.0007	74	0.0085	-160	-0.0183
