@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - tryfixdeploy.yml
 
 jobs:
   build-deploy:
@@ -16,20 +17,19 @@ jobs:
         with:
           node_version: 15.8.0
 
-      - name: Setup elm
-        run: npm install elm elm-app elm-test elm-format
+      - name: Setup Env
+        run: npm install 
+
+      - name: Test app
+        run: ./node_modules/.bin/elm-test --compiler ./node_modules/.bin/elm
       
-      - name: Setup Elm env
-        uses: actions/elm-publish-action@master
-        
       - name: build elm-app
         run: 
-          ./node_modules/.bin/elm-app build
+          ./node_modules/.bin/elm make src/Main.elm
 
-      - name: Move files
-        run: |
-          mkdir ./public
-          mv ./index.html ./public/
+      - name: move index.html to public
+        run:
+          mv ./index.html ./public
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
