@@ -10,17 +10,30 @@ jobs:
   build-deploy:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
-      with:
-        node_version: 15.8.0
-      - run: |
-        elm-app build
-      env: 
-        PUBLIC_URL: ./
-      - uses: peaceiris/actions-gh-pages@v2.4.0
-      env:
-        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./build
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node_version: 15.8.0
+
+      - name: Setup elm
+        run: npm install elm elm-app elm-test elm-format
+      
+      - name: Setup Elm env
+        uses: actions/elm-publish-action@master
+        
+      - name: build elm-app
+        run: 
+          ./node_modules/.bin/elm-app build
+
+      - name: Move files
+        run: |
+          mkdir ./public
+          mv ./index.html ./public/
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
 

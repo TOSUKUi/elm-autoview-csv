@@ -1,0 +1,27 @@
+{
+  "name": "elm-autoview-csv",
+  "version": "1.0.0",
+  "description": "This project is bootstrapped with [Create Elm App](https://github.com/halfzebra/create-elm-app).",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "elm-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TOSUKUi/elm-autoview-csv.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TOSUKUi/elm-autoview-csv/issues"
+  },
+  "homepage": "https://github.com/TOSUKUi/elm-autoview-csv#readme",
+  "dependencies": {
+    "create-elm-app": "^5.22.0",
+    "elm": "^0.19.1-5",
+    "elm-test": "^0.19.1-revision6"
+  }
+}
